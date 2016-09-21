@@ -31,6 +31,27 @@ Developer @GA in NYC
   clear: both;
 }
 
+/* Center the container */
+.container {
+  width: 960px;
+  margin: 0 auto;
+  /*border: 5px solid black;*/
+  overflow: hidden;
+}
+
+.container-left {
+  width: 60%;
+  float: left;
+}
+
+.container-right {
+  width: 40%;
+  float: right;
+}
+
+.hide { 
+  display: none;
+}
 
 /******************************************
 /* BASE STYLES
@@ -39,6 +60,7 @@ Developer @GA in NYC
 body {
   color: #656565;
   font-size: 26px;
+  /*font-size: 1.625em;*/
   line-height: 1.4;
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-weight: 300;
@@ -46,6 +68,7 @@ body {
 }
 a {
   text-decoration: none;
+  color: #ffffff;
 }
 
 /* HEADER ELEMENTS */
@@ -53,23 +76,43 @@ a {
 header {
 }
 
-h1 {
+.title-homepage {
   font-size: 48px;
   font-weight: 800;
   color: #ffffff;
   text-align: center;
 }
 
-h2 {
+.title-other {
   font-size: 32px;
   color: #ffffff;
   font-weight: 600;
   text-align: center;
 }
 
+h2 {
+  font-size: 32px;
+  font-weight: 600;
+  text-align: left;
+  padding: 20px 0px;
+}
+
+.sub-header-text {
+  color: #ffffff;
+  text-align: center;
+}
+
 .transparent-box {
-  background-color: #292F33;
-  opacity: 0.7;
+  background-color: #587096;
+  opacity: 0.75;
+  display: inline-block;
+  padding: 25px;
+  /*text-align: center;*/
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 nav {
@@ -77,22 +120,33 @@ nav {
   text-align: center;
 }
 
-nav span {
+nav ul li {
   display: inline-block;
-  /*position: relative;*/
   margin: 0px 10px;
 }
 
 .homepage-header {
   background-image: url('../images/discover_point_fermin_lighthouse_2.jpg');
   background-size: cover;
+  position: relative;
 }
 
 .eat-header {
-  background-image: url('../images/discover_point_fermin_lighthouse_2.jpg');
+  background-image: url('../images/homepage_eat.jpg');
   background-size: cover;
+  background-position: center bottom;
   height: 200px;
   text-align: center;
+  padding-top: 20px;
+}
+
+.explore-header {
+  background-image: url('../images/homepage_explore.jpg');
+  background-size: cover;
+  background-position: center bottom;
+  height: 200px;
+  text-align: center;
+  padding-top: 20px;
 }
 
 .sub-nav {
@@ -100,46 +154,58 @@ nav span {
   font-size: 20px;
 }
 
-.eat-nav {
-  font-size: 18px;
+.body-nav {
+  font-size: 16px;
+  color: #656565;
+  background-color: #ffffff;
+  padding: 10px 0;
+  line-height: 100%;
+}
+
+/*.body-nav-color {
+  background-color: #ffffff;
+}*/
+
+.body-nav-links {
+  color: #656565;
 }
 
 /* BODY ELEMENTS */
 
+h3 {
+/*  font-size: 20px;
+  font-weight: 600;
+  text-align: center;*/
+}
+
+.subtitle-eat {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  background-color: #ffffff;
+
+}
+
 section {
   width: 100%;
   /*display: inline-block;*/
-  /*float: left;*/
-  /*margin: 0 1.5%; */
   text-align: center;
   padding: 10px 0;
 }
 
-article {
+.article-eat {
   width: 30%;
   float: left;
-  margin: 0% 1.5%;
+  margin: 0% 1.66%;
 }
 
-h3 {
-  font-size: 20px;
-  font-weight: 600;
-  text-align: center;
+.article-discover {
+  width: 100%;
 }
 
 /******************************************
 /* LAYOUT
 /*******************************************/
-
-/* Center the container */
-.container {
-  width: 960px;
-  margin: 0 auto;
-}
-
-.hide { 
-  display: none;
-}
 
 .button-homepage {
   color: #ffffff;
@@ -163,9 +229,18 @@ a.button-homepage:hover {
   width: 160px;
 }
 
+a.sub-nav-links:hover {
+  color: #EFBE7C;
+}
+
+a.body-nav-links:hover {
+  font-weight: 600;
+}
+
 .eat-description {
   font-size: 16px;
   background-color: #ffffff;
+  padding: 10px;
 }
 
 .eat-image-size {
@@ -174,10 +249,67 @@ a.button-homepage:hover {
   display: block;
 }
 
+.explore-image-size {
+  width: 50%;
+  margin: auto;
+/*  display: inline-block;*/
+}
+
+.explore-description {
+  width: 40%;
+  font-size: 16px;
+  background-color: #ffffff;
+  display: inline-block;
+}
+
 .read-more {
   font-size: 14px;
+  font-weight: 600;
   background-color: #ffffff;
 }
 
+/* carousel */
+#slide1 {
+  background-image: url('../images/discover_pv_nature_reserve_2.jpg');
+}
+
+#slide2 {
+  background-image: url('../images/discover_pv_nature_reserve_3.jpg');
+}
+
+#slide3 {
+  background-image: url('../images/discover_pv_nature_reserve_5.jpg');
+}
+
+.slide-image {
+  width: 50vw;
+  height: 50vh;
+  background-position: center;
+  background-size: cover;
+  display: inline-block;
+}
+
+#carousel {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 50vw;
+  height: 50vh;
+  position: relative;
+}
+
+.arrow {
+  width: 5%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+#right-arrow {
+  right: 20px;
+}
+
+#left-arrow {
+  left: 20px;
 
 
