@@ -1,10 +1,12 @@
 <head>
 
 	<meta charset="utf-8">
-	<title>Explore | I &lt;3 Southbay</title>
+	<title>Explore | I &#9829; Southbay</title>
 
 	<!-- external CSS links -->
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,300,600,800' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lora:400,700" rel="stylesheet">
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
 
@@ -13,58 +15,83 @@
 <body>
 	<header class="explore-header">
 	<!-- update background position for image to center -->
-		<h1 class="title-other">I<img src="images/icon_heart.svg" width="25px" height="25px">Southbay</h1>
+		<h1 class="title-other">I<img src="img/icon_heart.svg" width="25px" height="25px">Southbay</h1>
 		<nav>
 			<ul>
-				<li class="sub-nav"><a href="#" class="sub-nav-links">Eat</a></li>
-				<li class="sub-nav"><a href="#" class="sub-nav-links">Learn</a></li>
-				<li class="sub-nav"><a href="#" class="sub-nav-links">Explore</a></li>
+				<li class="sub-nav"><a href="eat.html" class="sub-nav-links">Eat</a></li>
+				<li class="sub-nav"><a href="learn.html" class="sub-nav-links">Learn</a></li>
+				<li class="sub-nav"><a href="#" class="sub-nav-links selected-page">Explore</a></li>
 				<li class="sub-nav"><a href="#" class="sub-nav-links">Map</a></li>
 			</ul>
 		</nav>
 	</header>
+			<nav class="body-nav">
+		<ul>
+			<li>Take me to: </li>
+			<li><a href="#nature" class="body-nav-links">Palos Verdes Nature Reserve</a></li>
+			<li><a href="#bike" class="body-nav-links">Marvin Braude Bike Trail</a></li>
+			<li><a href="#catalina" class="body-nav-links">Catalina Island</a></li>
+		</ul>
+		</nav>
 	<div class="container">
 
-		<article class="article-discover">
-			<h2>Palos Verdes Nature Reserve</h2>
-			<!-- to position the h2 header onto the carousel, move header inside carousel, add positioning (parent relative, h2 absolute) -->
-
+		<section class="section-explore">
 			<section id="carousel">
-			    <img src="img/arrow_left.svg" alt="Left Carousel Arrow" class="arrow" id="left-arrow">
-    			<img src="img/arrow_right.svg" alt="Right Carousel Arrow" class="arrow" id="right-arrow">
+				<h2 class="carousel-title" id="nature">Palos Verdes Nature Reserve</h2>
+			    <img src="img/arrow_left.svg" alt="Left Carousel Arrow" class="left-arrow" id="left-arrow">
+    			<img src="img/arrow_right.svg" alt="Right Carousel Arrow" class="right-arrow" id="right-arrow">
 				<div id="slide1" class="slide-image">
 				</div>
 				<div id="slide2" class="slide-image">
 				</div>
 				<div id="slide3" class="slide-image">
 				</div>
+			</section>
+			<section class="carousel-description">
 				<p class="explore-description">
 				The best Lorem Ipsum Generator in all the sea! Heave this scurvy copyfiller fer yar next adventure and cajol yar clients into walking the plank with ev'ry layout!
 				<span class="read-more">Read more ></span>
-				</p>	
+				</p>
+				<p class="hide show-this-on-click">
+				The best Lorem Ipsum Generator in all the sea! Heave this scurvy copyfiller fer yar next adventure and cajol yar clients into walking the plank with ev'ry layout!
+				</p>
 			</section>
-		</article>
+		</section>
 
-		<article class="article-discover">
-			<h2>Marvin Braude Bike Trail</h2>
+		<section class="section-explore">
+			<section id="carousel2">
+				<h2 class="carousel-title" id="bike">Marvin Braude Bike Trail</h2>
+			    <img src="img/arrow_left.svg" alt="Left Carousel Arrow" class="left-arrow" id="left-arrow2">
+    			<img src="img/arrow_right.svg" alt="Right Carousel Arrow" class="right-arrow" id="right-arrow2">
+				<div id="slide4" class="slide-image">
+				</div>
+				<div id="slide5" class="slide-image">
+				</div>
+				<div id="slide6" class="slide-image">
+				</div>
+			</section>
+			<section class="carousel-description">
+				<div>
+				<p>
+					The best Lorem Ipsum Generator in all the sea! Heave this scurvy copyfiller fer yar next adventure and cajol yar clients into walking the plank with ev'ry layout! Configure above, then get yer pirate ipsum...own the high seas, arg!
+					<span class="read-more">Read more ></span>
+				</p>
+				<p class="hide show-this-on-click">
+				The best Lorem Ipsum Generator in all the sea! Heave this scurvy copyfiller fer yar next adventure and cajol yar clients into walking the plank with ev'ry layout!
+				</p>
+				<p class="back-to-top">Back to top</p>
+				</div>
+			</section>
+		</section>
 
-			<section>
-			<img class="explore-image-size" src="images/eat_manhattan_beach_fishing_with_dynamite.jpg">
+		<section class="section-explore">
+			<h2 id="catalina">Catalina Island</h2>
+			<img class="explore-image-size" src="img/eat_manhattan_beach_fishing_with_dynamite.jpg">
 			<p class="explore-description">
 				The best Lorem Ipsum Generator in all the sea! Heave this scurvy copyfiller fer yar next adventure and cajol yar clients into walking the plank with ev'ry layout! Configure above, then get yer pirate ipsum...own the high seas, arg!
 				<span class="read-more">Read more ></span>
 			</p>
-			</section>
-
-		</article>
-		<article class="article-discover">
-			<h2>Catalina Island</h2>
-			<img class="explore-image-size" src="images/eat_manhattan_beach_fishing_with_dynamite.jpg">
-			<p class="explore-description">
-				The best Lorem Ipsum Generator in all the sea! Heave this scurvy copyfiller fer yar next adventure and cajol yar clients into walking the plank with ev'ry layout! Configure above, then get yer pirate ipsum...own the high seas, arg!
-				<span class="read-more">Read more ></span>
-			</p>
-		</article>
+		</section>
 	</div> <!--end container class -->
 <footer></footer>
 		<script src="http://codepen.io/assets/libs/fullpage/jquery.js"></script>
